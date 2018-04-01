@@ -27,3 +27,14 @@ network libraries such as `UDPConn.Read()` etc.
 
     // Encoding a string, int, slice or map
     packet, err = bencode.Encode(str)
+
+## Benchmarks
+
+Just for fun, and a comparison.
+
+    go test -bench=.
+
+    BenchmarkFelix-4                  100000             16544 ns/op
+    BenchmarkMarkSamman-4              50000             32664 ns/op
+    BenchmarkJackpal-4                 50000             36755 ns/op
+
