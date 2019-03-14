@@ -8,21 +8,14 @@
 A Go library for handling data in the bencode format. This is the format used
 by the Mainline DHT and BitTorrent protocols.
 
-
-## Install
-
-```go
-go get -u github.com/felix/go-bencode
-```
-
-
 ## Usage
 
 All encoded data objects are `[]byte`. This is the format returned by many
 network libraries such as `UDPConn.Read()` etc.
 
 ```go
-import bencode "github.com/felix/go-bencode"
+import bencode "src.userspace.com.au/felix/go-bencode"
+// or import bencode "github.com/felix/go-bencode"
 
 var i interface{}
 var packet []byte
@@ -39,7 +32,7 @@ packet, err = bencode.Encode(str)
 
 ## Benchmarks
 
-Just for fun, and a comparison.
+Just for fun, and a comparison:
 
 ```sh
 go test -bench=.
