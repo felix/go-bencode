@@ -1,10 +1,5 @@
 # go-bencode
 
-[![GoDoc](https://godoc.org/github.com/felix/go-bencode?status.svg)](http://godoc.org/github.com/felix/go-bencode)
-[![Build Status](https://cloud.drone.io/api/badges/felix/go-bencode/status.svg)](https://cloud.drone.io/felix/go-bencode)
-[![Coverage Status](https://coveralls.io/repos/github/felix/go-bencode/badge.svg?branch=master)](https://coveralls.io/github/felix/go-bencode?branch=master)
-[![Go Report Card](https://goreportcard.com/badge/github.com/felix/go-bencode)](https://goreportcard.com/report/github.com/felix/go-bencode)
-
 A Go library for handling data in the bencode format. This is the format used
 by the Mainline DHT and BitTorrent protocols.
 
