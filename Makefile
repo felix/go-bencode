@@ -11,6 +11,9 @@ lint: $(GOPATH)/bin/golint ## Run the code linter
 	@for file in $$(find . -name 'vendor' -prune -o -type f -name '*.go'); do \
 		golint $$file; done
 
+.PHONY: bench
+bench: ; go test -bench=.
+
 $(GOPATH)/bin/golint:
 	go get -u golang.org/x/lint/golint
 
