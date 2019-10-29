@@ -26,25 +26,25 @@ packet, err = bencode.Encode(str)
 
 ## Benchmarks
 
-Just for fun and comparison:
+Just for fun and comparison (go v1.13):
 
 ```sh
 go test -bench=.
 goos: freebsd
 goarch: amd64
 pkg: src.userspace.com.au/go-bencode
-BenchmarkFelix-4                  100000             22520 ns/op
-BenchmarkMarkSamman-4              30000             47871 ns/op
-BenchmarkJackpal-4                 30000             46966 ns/op
-BenchmarkDecodeWithString-4      5000000               379 ns/op
-BenchmarkDecodeString-4         10000000               199 ns/op
-BenchmarkDecodeWithInt-4        10000000               239 ns/op
-BenchmarkDecodeInt-4            10000000               187 ns/op
-BenchmarkDecodeWithList-4        1000000              1047 ns/op
-BenchmarkDecodeList-4            2000000               869 ns/op
-BenchmarkDecodeWithDict-4        2000000               972 ns/op
-BenchmarkDecodeDict-4            2000000               959 ns/op
+BenchmarkFelix-4                  140659              8518 ns/op
+BenchmarkMarkSamman-4              72080             16857 ns/op
+BenchmarkJackpal-4                 70902             17194 ns/op
+BenchmarkDecodeWithString-4      6856792               183 ns/op
+BenchmarkDecodeString-4         10423938               130 ns/op
+BenchmarkDecodeWithInt-4         8644882               146 ns/op
+BenchmarkDecodeInt-4            11680635               107 ns/op
+BenchmarkDecodeWithList-4        2046406               527 ns/op
+BenchmarkDecodeList-4            2494192               464 ns/op
+BenchmarkDecodeWithDict-4        2505790               479 ns/op
+BenchmarkDecodeDict-4            2674564               480 ns/op
 PASS
-ok      src.userspace.com.au/go-bencode   24.999s
+ok      src.userspace.com.au/go-bencode 17.455s
 ```
 
