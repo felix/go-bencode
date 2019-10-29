@@ -1,9 +1,0 @@
-kind: pipeline
-name: default
-steps:
-    - name: test
-      image: "golang:alpine"
-      commands:
-          - apk add --no-cache build-base ca-certificates git
-          - go get github.com/mattn/goveralls
-          - goveralls -v -service drone.io || exit 0

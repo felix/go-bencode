@@ -1,4 +1,4 @@
-module src.userspace.com.au/felix/go-bencode
+module src.userspace.com.au/go-bencode
 
 go 1.12
 

@@ -9,8 +9,7 @@ All encoded data objects are `[]byte`. This is the format returned by many
 network libraries such as `UDPConn.Read()` etc.
 
 ```go
-import bencode "src.userspace.com.au/felix/go-bencode"
-// or import bencode "github.com/felix/go-bencode"
+import bencode "src.userspace.com.au/go-bencode"
 
 var i interface{}
 var packet []byte
@@ -33,7 +32,7 @@ Just for fun and comparison:
 go test -bench=.
 goos: freebsd
 goarch: amd64
-pkg: src.userspace.com.au/felix/go-bencode
+pkg: src.userspace.com.au/go-bencode
 BenchmarkFelix-4                  100000             22520 ns/op
 BenchmarkMarkSamman-4              30000             47871 ns/op
 BenchmarkJackpal-4                 30000             46966 ns/op
@@ -46,6 +45,6 @@ BenchmarkDecodeList-4            2000000               869 ns/op
 BenchmarkDecodeWithDict-4        2000000               972 ns/op
 BenchmarkDecodeDict-4            2000000               959 ns/op
 PASS
-ok      src.userspace.com.au/felix/go-bencode   24.999s
+ok      src.userspace.com.au/go-bencode   24.999s
 ```
 
